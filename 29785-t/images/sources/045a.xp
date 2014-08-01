@@ -1,0 +1,40 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1,-1), P(1,1), "1.75 x 1.75in");
+  offset(P(0,-0.5));
+
+  begin();
+  degrees();
+  bold();
+  double dp(2);
+
+  P O(0,0), A(-1,0), Ap(1,0), B(0,1), Bp(0,-1), M(0.5,0), C(0.5*(1-sqrt(5)));
+  P R(B-M);
+
+  circle();
+  line(A, Ap);
+  line(B, Bp);
+
+  arc(M, norm(R), Atan2(R.x2(), R.x1()), 180);
+  line(M, B);
+  line(B, C);
+
+  label(A,  P(-dp,0), "$A$", l);
+  label(Ap, P( dp,0), "$A'$", r);
+
+  label(B,  P(0, dp), "$B$", t);
+  label(Bp, P(0,-dp), "$B'$", b);
+
+  label(M, P(0,-dp), "$M$", b);
+  label(C, P(0,-dp), "$C$", b);
+  label(O, P(-dp,-dp), "$O$", bl);
+
+  label(P(0,ymin()), P(0,-18), "\\textsc{Fig.~10}", b);
+
+  tikz_format();
+  end();
+}

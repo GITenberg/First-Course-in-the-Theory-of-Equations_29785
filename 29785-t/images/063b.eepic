@@ -1,0 +1,53 @@
+%% Generated from 063b.xp on Thu Jun  4 19:36:27 EDT 2009 by
+%% ePiX-1.2.6
+%% 
+%%   Cartesian bounding box: [-0.5,2.5] x [-0.5,2]
+%%   Actual size: 2.7 x 2.25in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}[cap=round]
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (2.7in,2.25in);
+\pgfsetlinewidth{0.8pt}
+\draw (0in,0.45in)--(2.7in,0.45in);
+\draw (0.45in,0in)--(0.45in,2.25in);
+\draw (0.7875in,0.95458in)--(0.7875in,0.45in);
+\draw (2.025in,2.19305in)--(2.025in,0.45in);
+\draw (0.7875in,0.95458in)--(2.025in,0.95458in);
+\draw (0.7875in,0.95458in)--(2.2725in,2.44074in);
+\pgftext[at={\pgfpoint{2.7in}{0.422326in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$X$}}}
+\pgftext[at={\pgfpoint{0.422326in}{2.25in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$Y$}}}
+\pgftext[at={\pgfpoint{0.422326in}{0.422326in}}] {\makebox(0,0)[tr]{\hbox{\color{rgb_000000}$O$}}}
+\pgftext[at={\pgfpoint{0.61875in}{0.477674in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$x$}}}
+\pgftext[at={\pgfpoint{1.40625in}{0.477674in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$h$}}}
+\pgftext[at={\pgfpoint{0.815174in}{0.70229in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$y$}}}
+\pgftext[at={\pgfpoint{2.05267in}{1.57381in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$Y-y$}}}
+\pgftext[at={\pgfpoint{0.759826in}{0.95458in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$P$}}}
+\pgftext[at={\pgfpoint{1.99733in}{2.22072in}}] {\makebox(0,0)[br]{\hbox{\color{rgb_000000}$Q$}}}
+\draw (0.675in,0.712266in)--(0.70125in,0.771295in)--
+  (0.7275in,0.828793in)--(0.75375in,0.884782in)--(0.78in,0.93928in)--(0.80625in,0.992308in)--(0.8325in,1.04389in)--
+  (0.85875in,1.09404in)--(0.885in,1.14277in)--(0.91125in,1.19012in)--
+  (0.9375in,1.2361in)--(0.96375in,1.28073in)--(0.99in,1.32404in)--
+  (1.01625in,1.36603in)--(1.0425in,1.40673in)--
+  (1.06875in,1.44616in)--(1.095in,1.48435in)--(1.12125in,1.5213in)--
+  (1.1475in,1.55705in)--(1.17375in,1.59161in)--(1.2in,1.625in)--
+  (1.22625in,1.65724in)--(1.2525in,1.68835in)--
+  (1.27875in,1.71836in)--(1.305in,1.74728in)--(1.33125in,1.77513in)--
+  (1.3575in,1.80193in)--(1.38375in,1.8277in)--(1.41in,1.85247in)--
+  (1.43625in,1.87624in)--(1.4625in,1.89905in)--
+  (1.48875in,1.92092in)--(1.515in,1.94185in)--(1.54125in,1.96188in)--
+  (1.5675in,1.98102in)--(1.59375in,1.99929in)--(1.62in,2.01672in)--
+  (1.64625in,2.03332in)--(1.6725in,2.04911in)--
+  (1.69875in,2.06412in)--(1.725in,2.07836in)--(1.75125in,2.09185in)--
+  (1.7775in,2.10462in)--(1.80375in,2.11668in)--(1.83in,2.12806in)--
+  (1.85625in,2.13876in)--(1.8825in,2.14883in)--
+  (1.90875in,2.15826in)--(1.935in,2.16709in)--(1.96125in,2.17534in)--
+  (1.9875in,2.18302in)--(2.01375in,2.19015in)--(2.04in,2.19676in)--
+  (2.06625in,2.20286in)--(2.0925in,2.20848in)--
+  (2.11875in,2.21363in)--(2.145in,2.21834in)--(2.17125in,2.22262in)--
+  (2.1975in,2.2265in)--(2.22375in,2.23in)--(2.25in,2.23313in);
+\pgftext[at={\pgfpoint{1.35in}{-0.166044in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~16}}}}
+\end{tikzpicture}

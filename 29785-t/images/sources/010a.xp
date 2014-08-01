@@ -1,0 +1,52 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1,-1), P(1,1), "2 x 2in");
+
+  begin();
+  arrow_inset(0.25);
+  arrow_ratio(1);
+  degrees();
+  P O(0, 0), z0(1, 0), z1(cis(120)), z2(cis(240));
+
+  double rad1(0.25), rad2(0.66*rad1), dp(2), dt(5);
+
+  bold();
+  circle();
+
+  line(P(-0.5), z0);
+  line(O, z1);
+  line(O, z2);
+
+  arc_arrow(O, rad1, 0, 120-dt);
+  arc_arrow(O, rad2, 0, 240-dt);
+
+  plain();
+  dashed();
+  triangle(z0, z1, z2);
+
+  label(z0, dp*z0, "$1$", r);
+  label(z1, dp*z1, "$\\omega$", tl);
+  label(z2, dp*z2, "$\\omega^2$", bl);
+
+  label(O, P(0,-dp), "$O$", br);
+ 
+  label(P(-0.375), P(0,dp), "$\\frac{1}{2}$", t);
+  label(P(-0.5, 0.25*sqrt(3)), P(-dp,0), "$\\frac{1}{2}\\sqrt{3}$", l);
+  label(0.5*z1, dp*J(z1), "$1$", bl);
+
+  label(P(0, ymin()), P(0,-6), "\\textsc{Fig.~2}", b);
+
+  font_size("scriptsize");
+  label_angle(-30);
+  label(polar(rad1,  60), -4*z2, "$120°$", c);
+
+  label_angle(60);
+  label(polar(rad2, 150), P(-4,4), "$240°$", c);
+
+  tikz_format();
+  end();
+}

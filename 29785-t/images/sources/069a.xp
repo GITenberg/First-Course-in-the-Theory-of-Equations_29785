@@ -1,0 +1,53 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+const std::string Ax("-{\\small Axis}");
+
+int main()
+{
+  picture(P(0,0), P(2,2), "1.75 x 1.75in");
+  // picture(P(0,0), P(2,2), "2 x 2in");
+
+  begin();
+  degrees();
+  bold();
+  double x0(1.1), th(30);
+  P O(0,0), XY(P(x0, ymax())), dir(polar(0.5*x0*Sec(th), th)), Yax(XY-2*dir);
+
+  line(P(xmin(),0), P(xmax(),0));
+  line(P(0,ymin()), P(0,ymax()));
+
+  line(O, 4*dir);
+  line(P(x0), XY);
+
+  dashed();
+  line(XY, Yax);
+
+  label(P(0.5*x0,0), P(0,-2), "$X$", b);
+  label(P(0.5*(xmax()+x0),0), P(0,-2), "$X$"+Ax, b);
+
+  label(0.5*Yax, P(2, 0), "$y$", r);
+  label(0.5*Yax + 2*dir, P(2, 0), "$y$", r);
+  label(P(x0, dir.x2()), P(2, 0), "$Y-y$", r);
+
+  label(XY, P(-2, 2), "$(X,Y)$", tr);
+  label(XY, P(2,-2), "$(x,y)$", br);
+
+  label(P(0,0), P(-2, 0), "$O$", l);
+  label(P(0,0), P(18, 2), "$\\theta$", tr);
+
+  label(P(0.5*xmax(), ymin()), P(0,-18), "\\textsc{Fig.~17}", b);
+
+  label_angle(th);
+  label(dir, P(0,2), "$x$", t);
+  label(dir+Yax, P(0,2), "$x$", t);
+  label(3*dir, P(0,0), "$x$"+Ax, r);
+
+  label_angle(90);
+  label(Yax, P(-2,12), "$Y$"+Ax, tl);
+  label(Yax, P( 2,14), "$y$"+Ax, tr);
+
+  tikz_format();
+  end();
+}

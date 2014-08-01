@@ -1,0 +1,55 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+void myquad(const P& p1, const P& p2, const P& p3, const P& p4)
+{
+  line(p1, p2);
+  line(p2, p3);
+  line(p3, p4);
+  line(p4, p1);
+}
+
+int main()
+{
+  picture(P(0,0), P(3,2), "2 x 1.33in");
+
+  begin();
+
+  P ptA(1.25, 0.5), ptC(0.6, 1.375), ptS(ptA+ptC), X(xmax()), Y(0,ymax());
+  P O(0,0), ptE(ptA&E_1), ptF(ptC&E_1), ptH(ptS&E_1), ptG(ptS.x1(), ptA.x2());
+  double dp(2);
+
+  dashed();
+  line(ptA, ptE);
+  line(ptC, ptF);
+  line(ptS, ptH);
+  line(ptA, ptG);
+
+  solid();
+  bold();
+  line(O, X);
+  line(O, Y);
+
+  myquad(O, ptA, ptS, ptC);
+  line(O, ptS);
+
+  label(X, P(0,-dp), "$X$", b);
+  label(Y, P(-dp,0), "$Y$", l);
+  label(O, P(-dp,0), "$O$", l);
+
+  label(ptE, P(0,-dp), "$E$", b);
+  label(ptF, P(0,-dp), "$F$", b);
+  label(ptH, P(0,-dp), "$H$", b);
+
+  label(ptG, P(dp,0), "$G$", r);
+  label(ptS, P(dp,0), "$S$", r);
+
+  label(ptA, P(-dp, dp), "$A$", tl);
+  label(ptC, P(-dp, dp), "$C$", tl);
+
+  label(P(0.5*xmax(), ymin()), P(0,-18), "\\textsc{Fig.~3}", b);
+
+  tikz_format();
+  end();
+}

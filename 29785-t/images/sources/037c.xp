@@ -1,0 +1,28 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-3,0), P(3,6), "1.5 x 1.5in");
+
+  begin();
+  degrees();
+  bold();
+  double rad(3), X(-2), ht(sqrt((rad-X)*(rad+X)));
+  double dp(2);
+
+  arc(P(0,0), rad, 0, 180);
+  line(P(-rad), P(rad));
+  line(P(X,0), P(X,ht));
+
+  label(P(0.5*(-rad+X)), P(0,-dp), "$1$", b);
+  label(P(0.5*( rad+X)), P(0,-dp), "$n$", b);
+
+  label(P(X, 0.5*ht), P(dp,0), "$s$", r);
+
+  label(P(0), P(0,-18), "\\textsc{Fig.~9}", b);
+
+  tikz_format();
+  end();
+}

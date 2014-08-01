@@ -1,0 +1,37 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double dp(4);
+
+int main()
+{
+  picture(P(0,0), P(2,1.25), "1.875 x 1.1in");
+  //  offset(P(0,0.1));
+  begin();
+
+  P A(polar(2, M_PI/6)), A1(A&E_1), O(0,0), X(xmax(),0), Y(0,ymax());
+
+  bold();
+  line(O, X);
+  line(O, Y);
+
+  path Tr(O,  A);
+  Tr.pt(A1).draw();
+
+  label(O, P(-dp,0), "$O$", l);
+  label(A, P( dp,0), "$A$", r);
+  label(X, P(0,-dp), "$X$", b);
+  label(Y, P(-dp,0), "$Y$", l);
+
+  label(O, P(20,2), "$\\theta$", tr);
+
+  label(0.5*A1, P(0,-dp), "$a$", b);
+  label(0.5*(A+A1), P(dp,0), "$b$", r);
+  label(0.5*A, P(-2,2), "$r$", tl);
+
+  label(P(0.5*xmax(), ymin()), P(0,-18), "\\textsc{Fig.~1}",b);
+
+  tikz_format();
+  end();
+}

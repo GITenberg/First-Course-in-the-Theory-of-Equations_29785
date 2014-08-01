@@ -1,0 +1,58 @@
+%% Generated from 061a.xp on Thu Jun  4 19:36:17 EDT 2009 by
+%% ePiX-1.2.6
+%% 
+%%   Cartesian bounding box: [-4,8] x [-12,4]
+%%   Actual size: 1.8 x 2.4in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}[cap=round]
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (1.8in,2.4in);
+\pgfsetlinewidth{0.8pt}
+\draw (0.3in,1.8in)--(1.95in,1.8in);
+\draw (0.6in,0.75in)--(0.6in,2.4in);
+\draw (1.2in,1.8in)--(1.2in,0.15in);
+\draw (0.45in,2.4in)--(0.48in,2.166in)--(0.51in,1.944in)--
+  (0.54in,1.734in)--(0.57in,1.536in)--(0.6in,1.35in)--
+  (0.63in,1.176in)--(0.66in,1.014in)--(0.69in,0.864in)--
+  (0.72in,0.726in)--(0.75in,0.6in)--(0.78in,0.486in)--
+  (0.81in,0.384in)--(0.84in,0.294in)--(0.87in,0.216in)--
+  (0.9in,0.15in)--(0.93in,0.096in)--(0.96in,0.054in)--
+  (0.99in,0.024in)--(1.02in,0.006in)--(1.05in,0in)--
+  (1.08in,0.006in)--(1.11in,0.024in)--(1.14in,0.054in)--
+  (1.17in,0.096in)--(1.2in,0.15in)--(1.23in,0.216in)--
+  (1.26in,0.294in)--(1.29in,0.384in)--(1.32in,0.486in)--
+  (1.35in,0.6in)--(1.38in,0.726in)--(1.41in,0.864in)--
+  (1.44in,1.014in)--(1.47in,1.176in)--(1.5in,1.35in)--
+  (1.53in,1.536in)--(1.56in,1.734in)--(1.59in,1.944in)--
+  (1.62in,2.166in)--(1.65in,2.4in);
+\pgftext[at={\pgfpoint{0.45in}{2.4in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{0.394652in}{2.4in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$(-1,4)$}}}
+\pgftext[at={\pgfpoint{0.6in}{1.35in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{0.544652in}{1.35in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$(0,-3)$}}}
+\pgftext[at={\pgfpoint{0.75in}{0.6in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{0.694652in}{0.6in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$(1,-8)$}}}
+\pgftext[at={\pgfpoint{0.9in}{0.15in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{0.844652in}{0.15in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$(2,-11)$}}}
+\pgftext[at={\pgfpoint{1.05in}{0in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{1.05in}{-0.055348in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$(3,-12)$}}}
+\pgftext[at={\pgfpoint{1.2in}{0.15in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{1.25535in}{0.15in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$(4,-11)$}}}
+\pgftext[at={\pgfpoint{1.35in}{0.6in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{1.40535in}{0.6in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$(5,-8)$}}}
+\pgftext[at={\pgfpoint{1.5in}{1.35in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{1.55535in}{1.35in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$(6,-3)$}}}
+\pgftext[at={\pgfpoint{1.65in}{2.4in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\times$}}}
+\pgftext[at={\pgfpoint{1.70535in}{2.4in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$(7,4)$}}}
+\pgftext[at={\pgfpoint{0.9in}{1.74465in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$4$}}}
+\pgftext[at={\pgfpoint{1.14465in}{0.975in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$11$}}}
+\pgftext[at={\pgfpoint{0.627674in}{1.82767in}}] {\makebox(0,0)[bl]{\hbox{\color{rgb_000000}$O$}}}
+\pgftext[at={\pgfpoint{1.14465in}{0.177674in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$P$}}}
+\pgftext[at={\pgfpoint{1.2in}{1.82767in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$Q$}}}
+\pgftext[at={\pgfpoint{0.655348in}{2.4in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$Y$}}}
+\pgftext[at={\pgfpoint{1.95in}{1.74465in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$X$}}}
+\pgftext[at={\pgfpoint{0.975in}{-0.332088in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~12}}}}
+\end{tikzpicture}

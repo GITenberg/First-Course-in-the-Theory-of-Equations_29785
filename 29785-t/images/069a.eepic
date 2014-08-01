@@ -1,0 +1,48 @@
+%% Generated from 069a.xp on Thu Jun  4 19:36:30 EDT 2009 by
+%% ePiX-1.2.6
+%% 
+%%   Cartesian bounding box: [0,2] x [0,2]
+%%   Actual size: 1.75 x 1.75in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}[cap=round]
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (1.75in,1.75in);
+\pgfsetlinewidth{0.8pt}
+\draw (0in,0in)--(1.75in,0in);
+\draw (0in,0in)--(0in,1.75in);
+\draw (0in,0in)--(1.925in,1.1114in);
+\draw (0.9625in,0in)--(0.9625in,1.75in);
+\draw (0.9625in,1.75in)--(0.928125in,1.73015in);
+\draw (0.859375in,1.69046in)--(0.825in,1.67061in);
+\draw (0.825in,1.67061in)--(0.790625in,1.65077in);
+\draw (0.721875in,1.61108in)--(0.6875in,1.59123in);
+\draw (0.6875in,1.59123in)--(0.653125in,1.57138in);
+\draw (0.584375in,1.53169in)--(0.55in,1.51184in);
+\draw (0.55in,1.51184in)--(0.515625in,1.492in);
+\draw (0.446875in,1.4523in)--(0.4125in,1.43246in);
+\draw (0.4125in,1.43246in)--(0.378125in,1.41261in);
+\draw (0.309375in,1.37292in)--(0.275in,1.35307in);
+\draw (0.275in,1.35307in)--(0.240625in,1.33323in);
+\draw (0.171875in,1.29353in)--(0.1375in,1.27369in);
+\draw (0.1375in,1.27369in)--(0.103125in,1.25384in);
+\draw (0.034375in,1.21415in)--(0in,1.1943in);
+\pgftext[at={\pgfpoint{0.48125in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$X$}}}
+\pgftext[at={\pgfpoint{1.35625in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$X$-{\small Axis}}}}
+\pgftext[at={\pgfpoint{0.027674in}{0.59715in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$y$}}}
+\pgftext[at={\pgfpoint{0.990174in}{1.15285in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$y$}}}
+\pgftext[at={\pgfpoint{0.990174in}{0.27785in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$Y-y$}}}
+\pgftext[at={\pgfpoint{0.934826in}{1.77767in}}] {\makebox(0,0)[bl]{\hbox{\color{rgb_000000}$(X,Y)$}}}
+\pgftext[at={\pgfpoint{0.990174in}{1.72233in}}] {\makebox(0,0)[tl]{\hbox{\color{rgb_000000}$(x,y)$}}}
+\pgftext[at={\pgfpoint{-0.027674in}{0in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$O$}}}
+\pgftext[at={\pgfpoint{0.249066in}{0.027674in}}] {\makebox(0,0)[bl]{\hbox{\color{rgb_000000}$\theta$}}}
+\pgftext[at={\pgfpoint{0.875in}{-0.249066in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~17}}}}
+\pgftext[at={\pgfpoint{0.48125in}{0.305524in}}] {\makebox(0,0)[b]{\rotatebox{30}{\hbox{\color{rgb_000000}$x$}}}}
+\pgftext[at={\pgfpoint{0.48125in}{1.49982in}}] {\makebox(0,0)[b]{\rotatebox{30}{\hbox{\color{rgb_000000}$x$}}}}
+\pgftext[at={\pgfpoint{1.44375in}{0.833549in}}] {\makebox(0,0)[l]{\rotatebox{30}{\hbox{\color{rgb_000000}$x$-{\small Axis}}}}}
+\pgftext[at={\pgfpoint{-0.027674in}{1.36034in}}] {\makebox(0,0)[br]{\rotatebox{90}{\hbox{\color{rgb_000000}$Y$-{\small Axis}}}}}
+\pgftext[at={\pgfpoint{0.027674in}{1.38802in}}] {\makebox(0,0)[bl]{\rotatebox{90}{\hbox{\color{rgb_000000}$y$-{\small Axis}}}}}
+\end{tikzpicture}

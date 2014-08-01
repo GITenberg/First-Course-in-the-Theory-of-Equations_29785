@@ -1,0 +1,46 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1,-1), P(8,5), "2.4 x 1.6in");
+
+  begin();
+  double ca(6), cb(4);
+  double dp(2);
+  P O(0,0), ptB(0,1), ptQ(ca, cb), X(xmax(),0), Y(0,ymax());
+  Circle Crc(0.5*(ptB+ptQ), ptQ);
+  Segment Xax(O, X), Yax(O, Y), MN(Crc*Xax), OC(Crc*Yax);
+
+  P ptC(OC.end1()), ptM(MN.end1()), ptN(MN.end2()), ptT(ptQ&E_1);
+
+  Segment QT(ptQ, ptT), QD(Crc*QT);
+  P ptD(QD.end1());
+
+  bold();
+  Crc.draw();
+  Xax.draw();
+
+  line(O, ptC);
+  line(ptQ, ptT);
+  line(ptQ, ptB);
+
+  label(O, P(-dp,0), "$O$", l);
+  label(ptC, P(-dp,0), "$C$", l);
+  label(ptB, P(-dp,-dp), "$B$", l);
+  label(ptQ, P( dp, dp), "$Q$", r);
+
+  label(ptM, P(-2*dp,dp), "$M$", t);
+  label(ptN, P( 2*dp,dp), "$N$", t);
+
+  label(ptD, P(dp,-dp), "$D$", r);
+
+  label(ptT, P(0,-dp), "$T$", b);
+  label(X, P(0,-dp), "$X$", b);
+
+  label(P(0.5*(xmin()+xmax()), ymin()), P(0,-6), "\\textsc{Fig.~6}", b);
+
+  tikz_format();
+  end();
+}

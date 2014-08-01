@@ -1,0 +1,22 @@
+%% Generated from 037b.xp on Thu Jun  4 19:36:07 EDT 2009 by
+%% ePiX-1.2.6
+%% 
+%%   Cartesian bounding box: [0,2.5] x [0,3]
+%%   Actual size: 1.25 x 1.5in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}[cap=round]
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (1.25in,1.5in);
+\pgfsetlinewidth{0.8pt}
+\draw (0in,0in)--(1.125in,0in)--(1.37396in,1.63742in)--(0in,0in)--cycle;
+\draw (0in,0in)--(0.5in,0in)--(0.610648in,0.727742in)--(0in,0in)--cycle;
+\pgftext[at={\pgfpoint{0.25in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$1$}}}
+\pgftext[at={\pgfpoint{0.8125in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$q=a/b$}}}
+\pgftext[at={\pgfpoint{0.27765in}{0.391545in}}] {\makebox(0,0)[br]{\hbox{\color{rgb_000000}$b$}}}
+\pgftext[at={\pgfpoint{0.964629in}{1.21026in}}] {\makebox(0,0)[br]{\hbox{\color{rgb_000000}$a$}}}
+\pgftext[at={\pgfpoint{0.625in}{-0.249066in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~8}}}}
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return -11 + x*x*(4 + x);
+}
+
+double df(double x)
+{
+  return x*(8 + 3*x);
+}
+
+int main()
+{
+  picture(P(-5,-15), P(5,5), "1.5 x 3in");
+  offset(P(0,0.125));
+
+  begin();
+  bold();
+  line(P(xmin(),0), P(xmax(),0));
+  line(P(0,ymin()), P(0,ymax()));
+  set_crop();
+
+  plot(f, xmin(), xmax(), 120);
+
+  label(P(0,0), P(-2,2), "$O$", tl);
+  label(P(xmax(),0), P(0,-2), "$X$", b);
+  label(P(0,ymax()), P(-2,0), "$Y$", l);
+
+  label(P(-8./3, f(-8./3)), P(0,2), "$M'$", t);
+  label(P(0,f(0)), P(2,-2), "$M$", br);
+
+  label(P(0.5*(xmin()+xmax()), ymin()), P(0,-12), "\\textsc{Fig.~14}", b);
+
+  tikz_format();
+  end();
+}

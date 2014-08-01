@@ -1,0 +1,39 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return -2 + x*(11 + x*(-9 + x*(-14 + 8*x)));
+}
+
+void cross(double x, double f(double))
+{
+  marker(P(x, f(x)), TIMES);
+}
+
+int main()
+{
+  picture(P(-1.5,-13), P(3.5,2), "1.15 x 3.45in");
+
+  begin();
+  bold();
+  line(P(xmin(),0), P(3,0));
+  line(P(0,-3), P(0,ymax()));
+  set_crop();
+
+  plot(f, xmin(), xmax(), 240);
+
+  cross(-1, f);
+  cross( 0, f);
+  cross( 1, f);
+  cross( 2, f);
+
+  label(P(0,0), P(-2,2), "$O$", tl);
+  label(P(-0.5,0), P(0,-2), "$1$", b);
+
+  label(P(0.5*(xmin()+xmax()), ymin()), P(0,-12), "\\textsc{Fig.~13}", b);
+
+  tikz_format();
+  end();
+}

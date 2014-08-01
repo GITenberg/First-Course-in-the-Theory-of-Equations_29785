@@ -1,0 +1,32 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1.25,-1.25), P(1.25,1.25), "1.5 x 1.5in");
+  offset(P(0,0.125));
+
+  begin();
+  degrees();
+  double dp(2);
+
+  bold();
+  circle();
+  P i0(1,0), i1(0,1), i2(-1,0), i3(0,-1);
+
+  quad(i0, i1, i2, i3);
+  line(i0, i2);
+  line(i1, i3);
+
+  label(P(0,0), P(-dp,-dp), "$O$", bl);
+  label(i0, dp*i0, "$1$", r);
+  label(i1, dp*i1, "$i$", t);
+  label(i2, dp*i2, "$-1$", l);
+  label(i3, dp*i3, "$-i$", b);
+
+  label(P(0,ymin()), P(0,-6), "\\textsc{Fig.~5}", b);
+
+  tikz_format();
+  end();
+}

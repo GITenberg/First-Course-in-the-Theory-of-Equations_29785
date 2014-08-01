@@ -1,0 +1,59 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return -3 + x*(x-6);
+}
+
+void label(double x, double f(double), const P& offset, epix_label_posn A)
+{
+  P loc(x, f(x));
+  std::stringstream buf;
+  buf << "$(" << x << "," << f(x) << ")$";
+
+  marker(loc, TIMES);
+  label(loc, offset, buf.str(), A);
+}
+
+int main()
+{
+  picture(P(-4,-12), P(8,4), "1.8 x 2.4in");
+
+  begin();
+  double dp(4);
+  P Q(4), pP(4,f(4));
+
+  bold();
+  line(P(-2,0), P(9,0));
+  line(P(0,-7), P(0,ymax()));
+
+  line(Q, pP);
+
+  plot(f, -1, 7, 40);
+  label(-1, f, P(-dp, 0), l);
+  label( 0, f, P(-dp, 0), l);
+  label( 1, f, P(-dp, 0), l);
+  label( 2, f, P(-dp, 0), l);
+  label( 3, f, P( 0,-dp), b);
+  label( 4, f, P( dp, 0), r);
+  label( 5, f, P( dp, 0), r);
+  label( 6, f, P( dp, 0), r);
+  label( 7, f, P( dp, 0), r);
+
+  label(P(2), P(0,-dp), "$4$", b);
+  label(P(4,-5.5), P(-dp,0), "$11$", l);
+
+  label(P(0,0), P(2,2), "$O$", tr);
+  label(pP, P(-4,2), "$P$", l);
+  label(Q, P(0,2), "$Q$", t);
+
+  label(P(0,ymax()), P(dp,0), "$Y$", r);
+  label(P(9,0), P(0,-dp), "$X$", b);
+
+  label(P(2.5, ymin()), P(0,-24), "\\textsc{Fig.~12}", b);
+
+  tikz_format();
+  end();
+}

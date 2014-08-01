@@ -1,0 +1,30 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,0), P(3,3), "1.5 x 1.5in");
+
+  begin();
+  degrees();
+  bold();
+  double ca(1.5), cb(1.25), cp(ca*cb), th(30);
+  double dp(2);
+  P O(0,0), p1(1+cb,0), p2(polar(ca+cp, th)), p2b(polar(ca, th));
+
+  triangle(O, p1, p2);
+  triangle(O, P(1), p2b);
+
+  label(P(0.5), P(0,-dp), "$1$", b);
+  label(P(1+0.5*cb), P(0,-dp), "$b$", b);
+
+  label(polar(0.5*ca, th), P(-dp,dp), "$a$", tl);
+  label_angle(th);
+  label(polar(ca*(1+0.5*cb), th), 3*P(-dp,dp), "$p=a·b$", c);
+
+  label_angle(0);
+  label(P(0.5*xmax()), P(0,-18), "\\textsc{Fig.~7}", b);
+  tikz_format();
+  end();
+}

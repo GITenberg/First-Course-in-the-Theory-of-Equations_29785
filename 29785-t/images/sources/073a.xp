@@ -1,0 +1,43 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,-M_PI), P(M_PI,M_PI), "1.25 x 2.5in");
+  offset(P(0,-0.5));
+
+  begin();
+  bold();
+  double xa(M_PI_4), xb(2.25);
+  P O(0,0);
+
+  line(P(xmin(),0), P(xmax(),0));
+  dashed();
+  line(P(M_PI_2,ymin()), P(M_PI_2,ymax()));
+  solid();
+
+  line(P(xa,0), P(xa, Tan(xa)));
+  line(P(xb,0), P(xb, Tan(xb)));
+
+  set_crop();
+  plot(Tan, xmin(), M_PI_2-0.001, 30);
+  plot(Tan, M_PI_2+0.001, xmax(), 30);
+
+  marker(P(xa, Tan(xa)), TIMES);
+  marker(P(xb, Tan(xb)), TIMES);
+
+  label(O, P(0,-2), "$O$", b);
+  label(P(M_PI,0), P(0, 2), "$\\pi$", t);
+
+  label(P(xa,0), P(0,-2), "$a$", b);
+  label(P(xb,0), P(0, 2), "$b$", t);
+
+  label(P(M_PI_2), P(-2,-2), "$\\frac{\\pi}{2}$", bl);
+
+  label(P(M_PI_2, ymin()), P(0,-18), "\\textsc{Fig.~21}", b);
+
+  tikz_format();
+
+  end();
+}

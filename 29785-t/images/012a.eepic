@@ -1,0 +1,73 @@
+%% Generated from 012a.xp on Thu Jun  4 19:35:53 EDT 2009 by
+%% ePiX-1.2.6
+%% 
+%%   Cartesian bounding box: [0,3] x [0,2]
+%%   Actual size: 2 x 1.33in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}[cap=round]
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (2in,1.33in);
+\draw (0.833333in,0.3325in)--(0.833333in,0.304792in);
+\draw (0.833333in,0.249375in)--(0.833333in,0.221667in);
+\draw (0.833333in,0.221667in)--(0.833333in,0.193958in);
+\draw (0.833333in,0.138542in)--(0.833333in,0.110833in);
+\draw (0.833333in,0.110833in)--(0.833333in,0.083125in);
+\draw (0.833333in,0.0277083in)--(0.833333in,0in);
+\draw (0.4in,0.914375in)--(0.4in,0.876276in);
+\draw (0.4in,0.800078in)--(0.4in,0.761979in);
+\draw (0.4in,0.761979in)--(0.4in,0.72388in);
+\draw (0.4in,0.647682in)--(0.4in,0.609583in);
+\draw (0.4in,0.609583in)--(0.4in,0.571484in);
+\draw (0.4in,0.495286in)--(0.4in,0.457188in);
+\draw (0.4in,0.457188in)--(0.4in,0.419089in);
+\draw (0.4in,0.342891in)--(0.4in,0.304792in);
+\draw (0.4in,0.304792in)--(0.4in,0.266693in);
+\draw (0.4in,0.190495in)--(0.4in,0.152396in);
+\draw (0.4in,0.152396in)--(0.4in,0.114297in);
+\draw (0.4in,0.038099in)--(0.4in,0in);
+\draw (1.23333in,1.24688in)--(1.23333in,1.20791in);
+\draw (1.23333in,1.12998in)--(1.23333in,1.09102in);
+\draw (1.23333in,1.09102in)--(1.23333in,1.05205in);
+\draw (1.23333in,0.974121in)--(1.23333in,0.935156in);
+\draw (1.23333in,0.935156in)--(1.23333in,0.896191in);
+\draw (1.23333in,0.818262in)--(1.23333in,0.779297in);
+\draw (1.23333in,0.779297in)--(1.23333in,0.740332in);
+\draw (1.23333in,0.662402in)--(1.23333in,0.623438in);
+\draw (1.23333in,0.623438in)--(1.23333in,0.584473in);
+\draw (1.23333in,0.506543in)--(1.23333in,0.467578in);
+\draw (1.23333in,0.467578in)--(1.23333in,0.428613in);
+\draw (1.23333in,0.350684in)--(1.23333in,0.311719in);
+\draw (1.23333in,0.311719in)--(1.23333in,0.272754in);
+\draw (1.23333in,0.194824in)--(1.23333in,0.155859in);
+\draw (1.23333in,0.155859in)--(1.23333in,0.116895in);
+\draw (1.23333in,0.0389648in)--(1.23333in,0in);
+\draw (0.833333in,0.3325in)--(0.866667in,0.3325in);
+\draw (0.933333in,0.3325in)--(0.966667in,0.3325in);
+\draw (0.966667in,0.3325in)--(1in,0.3325in);
+\draw (1.06667in,0.3325in)--(1.1in,0.3325in);
+\draw (1.1in,0.3325in)--(1.13333in,0.3325in);
+\draw (1.2in,0.3325in)--(1.23333in,0.3325in);
+\pgfsetlinewidth{0.8pt}
+\draw (0in,0in)--(2in,0in);
+\draw (0in,0in)--(0in,1.33in);
+\draw (0in,0in)--(0.833333in,0.3325in);
+\draw (0.833333in,0.3325in)--(1.23333in,1.24688in);
+\draw (1.23333in,1.24688in)--(0.4in,0.914375in);
+\draw (0.4in,0.914375in)--(0in,0in);
+\draw (0in,0in)--(1.23333in,1.24688in);
+\pgftext[at={\pgfpoint{2in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$X$}}}
+\pgftext[at={\pgfpoint{-0.027674in}{1.33in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$Y$}}}
+\pgftext[at={\pgfpoint{-0.027674in}{0in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$O$}}}
+\pgftext[at={\pgfpoint{0.833333in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$E$}}}
+\pgftext[at={\pgfpoint{0.4in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$F$}}}
+\pgftext[at={\pgfpoint{1.23333in}{-0.027674in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}$H$}}}
+\pgftext[at={\pgfpoint{1.26101in}{0.3325in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$G$}}}
+\pgftext[at={\pgfpoint{1.26101in}{1.24688in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$S$}}}
+\pgftext[at={\pgfpoint{0.805625in}{0.360139in}}] {\makebox(0,0)[br]{\hbox{\color{rgb_000000}$A$}}}
+\pgftext[at={\pgfpoint{0.372291in}{0.942014in}}] {\makebox(0,0)[br]{\hbox{\color{rgb_000000}$C$}}}
+\pgftext[at={\pgfpoint{1in}{-0.249066in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~3}}}}
+\end{tikzpicture}

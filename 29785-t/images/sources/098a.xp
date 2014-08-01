@@ -1,0 +1,58 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  return -1 + x*(0.5 + 0.125*x + 0.005*pow(x, 6));
+}
+
+Deriv fp(f);
+
+double df(double x)
+{
+  return fp.eval(x);
+}
+
+double iter(double x)
+{
+  return x - f(x)/df(x);
+}
+
+int main()
+{
+  picture(P(0,-1), P(2,1), "1.5 x 1.25in");
+
+  begin();
+  bold();
+
+  double alpha(xmin()), beta(xmax()), T(iter(beta));
+
+  P xA(alpha), xB(beta), pA(P(alpha, f(alpha))), pB(beta,  f(beta));
+
+  line(xA, xB);
+
+  line(xA, pA);
+  line(xB, pB);
+  line(P(T), pB);
+
+  plot(f, alpha, beta, 40);
+
+  dashed();
+  line(pA, pB);
+
+  label(xA, P(0,2),  "$\\alpha$", t);
+  label(pA, P(-2,0), "$A$", l);
+
+  label(xB, P(0,-2),  "$\\beta$", b);
+  label(pB, P(2, 0), "$B$", r);
+
+  label(P(T), P(0,-2), "$T$", b);
+  label(Segment(pA, pB)*Segment(xA, xB), P(-2,2), "$c$", tl);
+
+  label(P(0.5*xmax(), ymin()), P(0,-12), "\\textsc{Fig.~24}", b);
+
+  tikz_format();
+
+  end();
+}

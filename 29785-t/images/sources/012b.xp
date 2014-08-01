@@ -1,0 +1,47 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+P times(const P& arg1, const P& arg2)
+{
+  return P(arg1.x1()*arg2.x1() - arg1.x2()*arg2.x1(),
+	   arg1.x1()*arg2.x2() + arg1.x2()*arg2.x1());
+}
+
+void mytri(const P& p1, const P& p2, const P& p3)
+{
+  line(p1, p2);
+  line(p2, p3);
+  line(p3, p1);
+}
+
+int main()
+{
+  picture(P(0,0), P(2,1.33), "2 x 1.33in");
+
+  begin();
+
+  P ptA(1.25, 0.6), ptC(0.5, 0.5), ptP(times(ptA, ptC)), X(xmax());
+  P O(0,0), ptU(1);
+  double dp(2);
+
+  bold();
+  line(O, X);
+
+  mytri(O, ptU, ptA);
+  mytri(O, ptC, ptP);
+
+  label(X, P(0,-dp), "$X$", b);
+  label(ptU, P(0,-dp), "$U$", b);
+  label(O, P(-dp,0), "$O$", l);
+
+  label(ptA, P(dp,0), "$A$", r);
+  label(ptC, P(dp,0), "$C$", r);
+
+  label(ptP, P(-dp,dp), "$P$", tl);
+
+  label(P(0.5*xmax(), ymin()), P(0,-18), "\\textsc{Fig.~4}", b);
+
+  tikz_format();
+  end();
+}

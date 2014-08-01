@@ -1,0 +1,79 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1.25,-1), P(2.25,1), "3.0625 x 1.75in");
+  //  offset(P(0,-0.5));
+
+  begin();
+  degrees();
+  bold();
+  double dp(2);
+
+  P O(0,0), pD(-1,0), pC(1,0), pB(0,1), pA(0,-1), pS(-1,-1), pE(-0.25,-1);
+  P pF(pE+P(sqrt(1.0625))), pFp(pE-P(sqrt(1.0625))); // F and F'
+  P pH(pF+P(norm(pF))), pHp(pFp+P(norm(pFp)));       // H and H'
+  P pT(pH.x1()), pQ(pT+P(0, pHp.x1() - pA.x1()));    // T and Q
+
+  P ctr(0.5*(pB+pQ)), dir(pB-pQ); // circ(BQ) parameters
+  Circle Crc(ctr, pB);
+  Segment Xax(O, pT), MN(Crc*Xax);
+  P pM(MN.end1()), pN(MN.end2());                    // M and N
+
+  double L(0.5*pM.x1());
+
+  P pL(L), pP(L, sqrt((1-L)*(1+L)));                 // L and P
+
+  circle();
+  line(pA, pB);
+  line(pD, pT);
+
+  line(pFp, pH);
+  line(pH, pQ);
+  line(pQ, pB);
+  line(O, pE);
+  line(O, pF);
+  line(O, pFp);
+  line(pD, pS);
+  line(pL, pP);
+
+  arc(pF, norm(pF), 0, Atan2(-pF.x2(), -pF.x1()));
+  arc(pFp, norm(pFp), 0, Atan2(-pFp.x2(), -pFp.x1()));
+
+  double th(Atan2(dir.x2(), dir.x1()));
+  arc(ctr, 0.5*norm(dir), th, th+180);
+
+  label(P(0.5*(xmin()+xmax()), ymin()), P(0,-18), "\\textsc{Fig.~11}", b);
+
+  font_size("footnotesize");
+
+  label(pA, P(0,-dp), "$A$", b);
+  label(pB, P(0, dp), "$B$", t);
+
+  label(pC, P( dp,-dp), "$C$", br);
+  label(pD, P(-dp,0), "$D$", l);
+
+  label(pM, P(-2*dp,dp), "$M$", t);
+  label(pN, P( 14, -dp), "$N$", b);
+
+  label(pL, P(-dp,-dp), "$L$", b);
+  label(pP, P( dp, 0), "$P$", r);
+
+  label(O,  P(-dp,dp), "$O$", tl);
+
+  label(pFp, P(0,-dp), "$F'$", b);
+  label(pS,  P(0,-dp), "$S$", b);
+  label(pE,  P(-dp,-dp), "$E$", b);
+  label(pA,  P(0,-dp), "$A$", b);
+  label(pHp, P(0,-dp), "$H'$", b);
+  label(pF,  P(0,-dp), "$F$", b);
+  label(pH,  P(0,-dp), "$H$", b);
+
+  label(pQ,  P(dp,0), "$Q$", r);
+  label(pT,  P(dp,0), "$T$", r);
+
+  tikz_format();
+  end();
+}

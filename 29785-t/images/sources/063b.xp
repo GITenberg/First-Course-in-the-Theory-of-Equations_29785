@@ -1,0 +1,48 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double f(double u)
+{
+  double x(0.5*u-1.25);
+  return 2 + 1.2*x*x*x;
+}
+
+int main()
+{
+  picture(P(-0.5,-0.5), P(2.5,2), "2.7 x 2.25in");
+
+  begin();
+  bold();
+  double xp(0.375), xq(1.75);
+  P pP(xp, f(xp)), pQ(xq, f(xq));
+
+  line(P(xmin(),0), P(xmax(),0));
+  line(P(0,ymin()), P(0,ymax()));
+
+  line(pP, pP&E_1);
+  line(pQ, pQ&E_1);
+  line(pP, P(pQ.x1(), pP.x2()));
+  line(pP, pP + 1.2*(pQ - pP));
+
+  label(P(xmax(),0), P(0,-2), "$X$", b);
+  label(P(0,ymax()), P(-2,0), "$Y$", l);
+  label(P(0,0), P(-2, -2), "$O$", bl);
+
+  label(P(0.5*xp), P(0,2), "$x$", t);
+  label(P(0.5*(xp+xq)), P(0,2), "$h$", t);
+  label(P(xp, 0.5*f(xp)), P(2,0), "$y$", r);
+
+  label(P(xq, 0.5*(pP.x2() + pQ.x2())), P(2,0), "$Y-y$", r);
+
+  label(pP, P(-2,0), "$P$", l);
+  label(pQ, P(-2,2), "$Q$", tl);
+
+  set_crop();
+  plot(f, 0.25, 2, 60);
+
+  label(P(0.5*(xmin()+xmax()),ymin()), P(0,-12), "\\textsc{Fig.~16}", b);
+
+  tikz_format();
+  end();
+}

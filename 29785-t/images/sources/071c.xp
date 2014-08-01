@@ -1,0 +1,46 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+const double ht(0.125);
+const double wd(sqrt(1.5));
+const double x0(wd*sqrt(1.0/3)); // critical point
+
+double g(double x)
+{
+  return -0.35*x*(wd-x)*(wd+x);
+}
+
+double f(double x)
+{
+  return g(x) + ht;
+}
+
+int main()
+{
+  picture(P(-1.5,-1), P(1.5,1), "2.4 x 1.25in");
+
+  begin();
+  bold();
+  P O(0,0);
+
+  line(P(xmin(),0), P(xmax(),0));
+  line(P(0,ymin()), P(0,ymax()));
+
+  set_crop();
+  plot(f, xmin(), xmax()-0.15, 60);
+  marker(P(x0, f(x0)), TIMES);
+  marker(P(-x0, f(-x0)), TIMES);
+
+  label(O, P(-2,-2), "$O$", bl);
+  label(P(xmax(),0), P(0,-2), "$X$", b);
+  label(P(0,ymax()), P(2, 0), "$Y$", r);
+
+  masklabel(P(0,ymin()), P(0,0), "$-2l\\sqrt{l}<q<2l\\sqrt{l}$", t);
+
+  label(P(0,ymin()), P(0,-6), "\\textsc{Fig.~20}", b);
+
+  tikz_format();
+
+  end();
+}

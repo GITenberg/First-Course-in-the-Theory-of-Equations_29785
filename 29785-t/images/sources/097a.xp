@@ -1,0 +1,68 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double f(double x)
+{
+  double u(x-7), v(u*u);
+  return 0.125*v*(0.001*v*v + 1) - 1;
+}
+
+Deriv fp(f);
+
+double df(double x)
+{
+  return fp.eval(x);
+}
+
+double iter(double x)
+{
+  return x - f(x)/df(x);
+}
+
+int main()
+{
+  picture(P(0,-1), P(8,4), "2.5 x 1.5625in");
+
+  begin();
+  bold();
+
+  double xQ(2), T(iter(xQ)), T1(iter(T));
+
+  P O(0,0);
+
+  line(O, P(xmax(),0));
+  line(O, P(0,3));
+
+  line(P(xQ,0), P(xQ, f(xQ)));
+  line(P(T,0), P(xQ, f(xQ)));
+
+  plot(f, xQ, xmax(), 60);
+
+  line_style("-  -  ");
+  line(P(T,0), P(T, f(T)));
+  line(P(T1,0), P(T, f(T)));
+
+  label(O, P(0,-2), "$O$", b);
+  label(P(xQ), P(0,-2), "$Q$", b);
+  label(P(T), P(0,-2), "$T$", b);
+  label(P(T1), P(0,-2), "$T_1$", b);
+
+  label(P(7,f(7)), P(0,-2), "$P_1$", b);
+
+  label(P(0.5*xQ), P(0, 2), "$a$", t);
+  label(P(0.5*(xQ+T)), P(0, 2), "$h$", t);
+  label(P(newton(f, T1)), P(2, 2), "$S$", t);
+  label(P(xmax()), P(0, 2), "$X$", t);
+
+  label(P(0,3), P(2,0), "$Y$", r);
+
+  label(P(xQ,f(xQ)), P(2,0), "$P$", r);
+  label(P(xmax(),f(xmax())), P(2,0), "$P_2$", r);
+
+  label(P(0.5*xmax(), ymin()), P(0,-18), "\\textsc{Fig.~22}", b);
+
+  tikz_format();
+
+  end();
+}
