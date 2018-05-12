@@ -15,6 +15,8 @@ creator:
     url: http://www.gutenberg.org/2009/agents/34169
     wikipedia: http://en.wikipedia.org/wiki/Leonard_Eugene_Dickson
 description: ''
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/29785#First-Course-in-the-Theory-of-Equations
 gutenberg_bookshelf: Mathematics
 gutenberg_issued: '2009-08-24'
 gutenberg_type: Text
