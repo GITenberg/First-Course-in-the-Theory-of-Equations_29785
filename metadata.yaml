@@ -1,0 +1,32 @@
+_repo: First-Course-in-the-Theory-of-Equations_29785
+_version: 0.1.0
+covers:
+- cover_type: generated
+  image_path: cover.png
+creator:
+  author:
+    agent_name: Dickson, Leonard E. (Leonard Eugene)
+    aliases:
+    - Dickson, Leonard Eugene
+    - Dickson, L. E. (Leonard Eugene)
+    birthdate: 1874
+    deathdate: 1954
+    gutenberg_agent_id: '34169'
+    url: http://www.gutenberg.org/2009/agents/34169
+    wikipedia: http://en.wikipedia.org/wiki/Leonard_Eugene_Dickson
+description: ''
+gutenberg_bookshelf: Mathematics
+gutenberg_issued: '2009-08-24'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '29785'
+  lccn: '22001361'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcc 'QA'
+- !lcsh 'Equations, Theory of'
+title: First Course in the Theory of Equations
+url: http://www.gutenberg.org/ebooks/29785
